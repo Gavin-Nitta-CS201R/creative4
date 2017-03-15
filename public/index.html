@@ -1,36 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Creative 4</title>
   <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-  <link rel="stylesheet" type="text/css"  href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
   <script src="javascripts/app.js"></script>
-
 </head>
 
-<body ng-app="Creative4" ng-controller="MainCtrl">
-  <h1 id="banner">Visualize Your Bracket </h1>
+<body ng-app="Creative4" ng-controller="MainCtrl" layout="column">
+  <h1 id="banner" layout="row" layout-align="center center">Visualize Your Bracket</h1>
+
   <div layout="row" layout-align="center center">
-    <p>Make your bracket more than just names on a paper!            <em>   Make it real</em></p>
-
-
+    <p>Make your bracket more than just names on a paper! <em>Make it real</em></p>
   </div>
 
   <form>
-      <img id="ncaapic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/NCAA_logo.svg/2000px-NCAA_logo.svg.png" alt="NCAA" width = "75"/>
-      THE future winner! <input type="text" id="winningTeam" value=""/>
-      The losing team <input type="text" id="losingTeam" value=""/>
-      <input id="enterButton" type="submit" value="Submit"/>
+    <img id="ncaapic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/NCAA_logo.svg/2000px-NCAA_logo.svg.png"
+      alt="NCAA" width="75" /> THE future winner! <input type="text" id="winningTeam" value="" /> The losing team <input
+      type="text" id="losingTeam" value="" />
+    <input id="enterButton" type="submit" value="Submit" />
   </form>
-  <div>To Contain Name and Images of Winning Team</div>
 
+  <div>To Contain Name and Images of Winning Team</div>
   <div>To Contain Name and Images of Losing Team</div>
-  
 </body>
 
 </html>
