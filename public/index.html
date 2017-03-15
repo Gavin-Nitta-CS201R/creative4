@@ -23,15 +23,32 @@
     <p>Make your bracket more than just names on a paper! <em>Make it real</em></p>
   </div>
 
-  <form>
-    <img id="ncaapic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/NCAA_logo.svg/2000px-NCAA_logo.svg.png"
-      alt="NCAA" width="75" /> THE future winner! <input type="text" id="winningTeam" value="" /> The losing team <input
-      type="text" id="losingTeam" value="" />
-    <input id="enterButton" type="submit" value="Submit" />
-  </form>
 
-  <div>To Contain Name and Images of Winning Team</div>
-  <div>To Contain Name and Images of Losing Team</div>
+
+  <div layout="row" layout-align="space-around center">
+    <div flex="75" layout="row" layout-align="space-between center">
+      <md-input-container flex="40" md-no-float class="md-block">
+        <input ng-model="winner" placeholder="The winning team">
+      </md-input-container>
+      <md-input-container flex="40" md-no-float class="md-block">
+        <input ng-model="loser" placeholder="The losing team">
+      </md-input-container>
+    </div>
+    <div layout="column" layout-align="center center">
+      <img ng-click="getImages()" id="ncaapic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/NCAA_logo.svg/2000px-NCAA_logo.svg.png"
+        alt="NCAA" width="75" />
+      <span ng-show="showHint" class="hint">HINT: CLICK ME!</span>
+    </div>
+  </div>
+
+  <div layout="row">
+    <div layout="row" layout-wrap flex="50">
+      Winners
+    </div>
+    <div layout="row" layout-wrap flex="50">
+      Losers
+    </div>
+  </div>
 </body>
 
 </html>
