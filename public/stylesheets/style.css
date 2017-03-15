@@ -6,3 +6,21 @@ body {
 a {
   color: #00B7FF;
 }
+
+#banner {
+	font-size:50px;
+	text-shadow: 2px 2px rgb(74, 75, 76)
+	text-align:center;
+	height:80px;
+	top:0px;
+	left:0px;
+	position:fixed;
+	background-color:white;
+	width:100%;
+	color:black;
+	margin-top:0px;
+}
+
+#ncaapic {
+	float:right;
+}
