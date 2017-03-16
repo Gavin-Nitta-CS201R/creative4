@@ -16,13 +16,12 @@
   <script src="javascripts/app.js"></script>
 </head>
 
-<body ng-app="Creative4" ng-controller="MainCtrl" layout="column">
+<body ng-app="Creative4" ng-controller="MainCtrl">
   <h1 id="banner" layout="row" layout-align="center center">Visualize Your Bracket</h1>
 
   <div layout="row" layout-align="center center">
     <p>Make your bracket more than just names on a paper! <em>Make it real</em></p>
   </div>
-
 
 
   <div layout="row" layout-align="space-around center">
@@ -41,12 +40,22 @@
     </div>
   </div>
 
-  <div layout="row">
+  <div layout="row" class="test">
     <div layout="row" layout-wrap flex="50">
-      Winners
+      <md-card flex="45" ng-repeat="winner in winners">
+        <img ng-src="{{winner.display_sizes[0].uri}}" class="md-card-image" alt="Washed Out">
+        <md-card-content flex>
+          <p>{{winner.title}}</p>
+        </md-card-content>
+      </md-card>
     </div>
     <div layout="row" layout-wrap flex="50">
-      Losers
+      <md-card flex="45" ng-repeat="loser in losers">
+        <img ng-src="{{loser.display_sizes[0].uri}}" class="md-card-image" alt="Washed Out">
+        <md-card-content flex>
+          <p>{{loser.title}}</p>
+        </md-card-content>
+      </md-card>
     </div>
   </div>
 </body>
